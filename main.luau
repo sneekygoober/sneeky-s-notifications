@@ -10,6 +10,14 @@ return {
             ["Duration"] = 60
         });
     end,
+    ["info"] = function(info: string)
+        SG:SetCore("SendNotification", {
+            ["Title"] = "INFO - READ BELOW",
+            ["Text"] = info,
+            ["Duration"] = 60,
+            ["Button1"] = "Close"
+        });
+    end,
     ["error"] = function(err: string)
         SG:SetCore("SendNotification", {
             ["Title"] = "ERROR - READ BELOW",
