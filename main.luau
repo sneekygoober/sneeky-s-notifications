@@ -14,7 +14,7 @@ return {
         SG:SetCore("SendNotification", {
             ["Title"] = "INFO - READ BELOW",
             ["Text"] = info,
-            ["Duration"] = 60,
+            ["Duration"] = 20,
             ["Button1"] = "Close"
         });
     end,
