@@ -37,6 +37,7 @@ if getgenv()["SNEEKY'S SCRIPT RUNNING"] then
     --task.wait(1);
     coroutine.yield();
     --plr:Kick("DO NOT EXECUTE THIS SCRIPT MORE THAN ONCE!");
+    return;
 end;
 
 getgenv()["SNEEKY'S SCRIPT RUNNING"] = true;
@@ -44,5 +45,7 @@ getgenv()["SNEEKY'S SCRIPT RUNNING"] = true;
 local c; c = Players.PlayerRemoving:Connect(function(player)
     if player == plr then getgenv()["SNEEKY'S SCRIPT RUNNING"] = nil; c:Disconnect(); c = nil; end;
 end);
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sneekygoober/sneeky-s-notifications/refs/heads/main/request.luau"))();
 
 return notifs;
