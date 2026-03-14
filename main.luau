@@ -1,4 +1,5 @@
 local cloneref = cloneref or function(i: Instance) return i; end;
+local getgenv = getgenv or getfenv;
 
 local SG: StarterGui = cloneref(game:GetService("StarterGui"));
 local Players: Players = cloneref(game:GetService("Players"));
@@ -31,7 +32,6 @@ local notifs = {
     end
 };
 
-local getgenv = getgenv or getfenv;
 if getgenv()["SNEEKY'S SCRIPT RUNNING"] then
     notifs["error"]("DO NOT EXECUTE THIS SCRIPT MORE THAN ONCE!");
     task.wait(1);
