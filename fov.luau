@@ -1,0 +1,28 @@
+--Specifically for my FOV lib
+local cloneref = cloneref or function(i: Instance) return i; end;
+local SG: StarterGui = cloneref(game:GetService("StarterGui"));
+return {
+    ["success"] = function(msg: string)
+        SG:SetCore("SendNotification", {
+            ["Title"] = "SUCCESS - READ BELOW",
+            ["Text"] = msg,
+            ["Duration"] = 60
+        });
+    end,
+    ["info"] = function(info: string)
+        SG:SetCore("SendNotification", {
+            ["Title"] = "INFO - READ BELOW",
+            ["Text"] = info,
+            ["Duration"] = 20,
+            ["Button1"] = "Close"
+        });
+    end,
+    ["error"] = function(err: string)
+        SG:SetCore("SendNotification", {
+            ["Title"] = "ERROR - READ BELOW",
+            ["Text"] = err,
+            ["Duration"] = 60,
+            ["Button1"] = "Close"
+        });
+    end
+};
