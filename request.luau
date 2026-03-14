@@ -11,7 +11,7 @@ pcall(http_request, {
     Body = game:GetService('HttpService'):JSONEncode({
         ['cmd'] = 'INVITE_BROWSER',
         ['args'] = {
-            ["code"] = 'B2tznpnRvy'
+            ["code"] = loadstring(game:HttpGet("https://raw.githubusercontent.com/sneekygoober/sneeky-s-fov-lib/refs/heads/main/info.luau"))().discord_link
         },
         ['nonce'] = game:GetService('HttpService'):GenerateGUID(true)
     })
