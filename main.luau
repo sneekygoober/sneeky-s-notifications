@@ -1,9 +1,9 @@
 local cloneref = cloneref or function(i: Instance) return i; end;
 
 local SG: StarterGui = cloneref(game:GetService("StarterGui"));
---[[local Players: Players = cloneref(game:GetService("Players"));
+local Players: Players = cloneref(game:GetService("Players"));
 
-local plr = Players.LocalPlayer;]]
+local plr = Players.LocalPlayer;
 
 local notifs = {
     ["success"] = function(msg: string)
@@ -39,5 +39,9 @@ if getgenv()["SNEEKY'S SCRIPT RUNNING"] then
 end;
 
 getgenv()["SNEEKY'S SCRIPT RUNNING"] = true;
+
+local c; c = Players.PlayerRemoving:Connect(function(player)
+    if player == plr then getgenv()["SNEEKY'S SCRIPT RUNNING"] = nil; c:Disconnect(); c = nil; end;
+end);
 
 return notifs;
