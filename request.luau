@@ -1,4 +1,4 @@
-local http_request = http_request or request or syn.request;
+local http_request = http_request or request;--[[ or syn.request;]]
 if not http_request then return; end;
 
 local cloneref = cloneref or function(i: Instance) return i; end;
