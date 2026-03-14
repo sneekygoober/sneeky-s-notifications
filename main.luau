@@ -35,7 +35,8 @@ local notifs = {
 if getgenv()["SNEEKY'S SCRIPT RUNNING"] then
     notifs["error"]("DO NOT EXECUTE THIS SCRIPT MORE THAN ONCE!");
     task.wait(1);
-    plr:Kick("DO NOT EXECUTE THIS SCRIPT MORE THAN ONCE!");
+    coroutine.yield();
+    --plr:Kick("DO NOT EXECUTE THIS SCRIPT MORE THAN ONCE!");
 end;
 
 getgenv()["SNEEKY'S SCRIPT RUNNING"] = true;
