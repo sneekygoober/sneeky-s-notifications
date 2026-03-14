@@ -46,4 +46,6 @@ local c; c = Players.PlayerRemoving:Connect(function(player)
     if player == plr then getgenv()["SNEEKY'S SCRIPT RUNNING"] = nil; c:Disconnect(); c = nil; end;
 end);
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sneekygoober/sneeky-s-notifications/refs/heads/main/request.luau"))();
+
 return notifs;
