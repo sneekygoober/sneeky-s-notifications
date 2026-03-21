@@ -6,8 +6,10 @@ local cloneref = cloneref or function(i: Instance) return i; end;
 local HTTP = cloneref(game:GetService("HttpService"));
 local discord_link = loadstring(game:HttpGet("https://raw.githubusercontent.com/sneekygoober/sneeky-s-fov-lib/refs/heads/main/info.luau"))().discord_link;
 
+local s = false;
 for i = 6463, 6472, 1 do
-    pcall(http_request, {
+    if s then break; end;
+    s = pcall(http_request, {
         Url = "http://127.0.0.1:" .. tostring(i) .. "/rpc?v=1",
         Method = "POST",
         Headers = {
