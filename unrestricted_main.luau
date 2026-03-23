@@ -1,10 +1,14 @@
 local cloneref = cloneref or function(i: Instance) return i; end;
 local SG: StarterGui = cloneref(game:GetService("StarterGui"));
+
+local get_id = loadstring(game:HttpGet("https://raw.githubusercontent.com/sneekygoober/sneeky-s-fov-lib/refs/heads/main/get_id.luau"))();
+
 return {
     ["success"] = function(msg: string)
         SG:SetCore("SendNotification", {
             ["Title"] = "SUCCESS - READ BELOW",
             ["Text"] = msg,
+            ["Icon"] = get_id("logo");
             ["Duration"] = 60
         });
     end,
@@ -12,6 +16,7 @@ return {
         SG:SetCore("SendNotification", {
             ["Title"] = "INFO - READ BELOW",
             ["Text"] = info,
+            ["Icon"] = get_id("logo");
             ["Duration"] = 20,
             ["Button1"] = "Close"
         });
@@ -20,6 +25,7 @@ return {
         SG:SetCore("SendNotification", {
             ["Title"] = "ERROR - READ BELOW",
             ["Text"] = err,
+            ["Icon"] = get_id("logo");
             ["Duration"] = 60,
             ["Button1"] = "Close"
         });
