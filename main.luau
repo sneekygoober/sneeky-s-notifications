@@ -4,6 +4,8 @@ local getgenv = getgenv or getfenv;
 local SG: StarterGui = cloneref(game:GetService("StarterGui"));
 local Players: Players = cloneref(game:GetService("Players"));
 
+local get_id = loadstring(game:HttpGet("https://raw.githubusercontent.com/sneekygoober/sneeky-s-fov-lib/refs/heads/main/get_id.luau"))();
+
 local plr = Players.LocalPlayer;
 
 local notifs = {
@@ -11,6 +13,7 @@ local notifs = {
         SG:SetCore("SendNotification", {
             ["Title"] = "SUCCESS - READ BELOW",
             ["Text"] = msg,
+            ["Icon"] = get_id("logo");
             ["Duration"] = 60
         });
     end,
@@ -18,6 +21,7 @@ local notifs = {
         SG:SetCore("SendNotification", {
             ["Title"] = "INFO - READ BELOW",
             ["Text"] = info,
+            ["Info"] = get_id("logo");
             ["Duration"] = 20,
             ["Button1"] = "Close"
         });
@@ -26,6 +30,7 @@ local notifs = {
         SG:SetCore("SendNotification", {
             ["Title"] = "ERROR - READ BELOW",
             ["Text"] = err,
+            ["Info"] = get_id("logo");
             ["Duration"] = 60,
             ["Button1"] = "Close"
         });
