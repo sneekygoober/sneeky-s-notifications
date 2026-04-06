@@ -21,7 +21,7 @@ local notifs = {
         SG:SetCore("SendNotification", {
             ["Title"] = "INFO - READ BELOW",
             ["Text"] = info,
-            ["Info"] = get_id("logo");
+            ["Icon"] = get_id("logo");
             ["Duration"] = 20,
             ["Button1"] = "Close"
         });
@@ -30,7 +30,7 @@ local notifs = {
         SG:SetCore("SendNotification", {
             ["Title"] = "ERROR - READ BELOW",
             ["Text"] = err,
-            ["Info"] = get_id("logo");
+            ["Icon"] = get_id("logo");
             ["Duration"] = 60,
             ["Button1"] = "Close"
         });
