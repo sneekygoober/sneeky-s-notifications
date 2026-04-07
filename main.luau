@@ -53,4 +53,6 @@ end);
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/sneekygoober/sneeky-s-notifications/refs/heads/main/request.luau"))();
 
+notifs["info"]("Executing...");
+
 return notifs;
