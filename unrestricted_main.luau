@@ -21,6 +21,15 @@ return {
             ["Button1"] = "Close"
         });
     end,
+    ["warning"] = function(w: string)
+        SG:SetCore("SendNotification", {
+            ["Title"] = "WARNING - READ BELOW",
+            ["Text"] = w,
+            ["Icon"] = get_id("logo");
+            ["Duration"] = 30,
+            ["Button1"] = "Close"
+        });
+    end,
     ["error"] = function(err: string)
         SG:SetCore("SendNotification", {
             ["Title"] = "ERROR - READ BELOW",
